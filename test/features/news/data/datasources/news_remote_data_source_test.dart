@@ -38,7 +38,7 @@ void main() {
   }
 
   test(
-    "should perform a GET request on a URL with number being the endpoint and with application/json header",
+    "should perform a GET request on a URL with query params being the endpoint",
     () async {
       // arrange
       setUpMockClientSuccess200(mockClient);
@@ -71,11 +71,11 @@ void main() {
 
   test(
     "should throw ServerException when response code is 404 or other",
-    () async {
+    () {
       // arrange
       setUpMockClientFailure404(mockClient);
       // act
-      final call = await newsRemoteDataSource.getNews;
+      final call = newsRemoteDataSource.getNews;
       // assert
       expect(() => call(), throwsA(isA<ServerException>()));
     },
