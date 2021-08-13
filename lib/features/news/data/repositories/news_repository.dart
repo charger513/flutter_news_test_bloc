@@ -1,18 +1,19 @@
-import 'package:flutter_news_test_bloc/core/errors/exception.dart';
-import 'package:flutter_news_test_bloc/core/network/connection/network_info.dart';
-import 'package:flutter_news_test_bloc/features/news/data/datasources/news_remote_data_source.dart';
-import 'package:flutter_news_test_bloc/features/news/domain/entities/news_response.dart';
-import 'package:flutter_news_test_bloc/core/errors/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter_news_test_bloc/features/news/domain/repositories/news_repository_contract.dart';
+
+import '../../../../core/errors/exception.dart';
+import '../../../../core/errors/failure.dart';
+import '../../../../core/network/repositories/network_info_contract.dart';
+import '../../domain/entities/news_response.dart';
+import '../../domain/repositories/news_repository_contract.dart';
+import '../datasources/news_remote_data_source.dart';
 
 class NewsRepository implements NewsRepositoryContract {
-  final NetworkInfo _networkInfo;
-  final NewsRemoteDataSource _newsRemoteDataSource;
+  final NetworkInfoContract _networkInfo;
+  final NewsRemoteDataSourceContract _newsRemoteDataSource;
 
   NewsRepository({
-    required NetworkInfo networkInfo,
-    required NewsRemoteDataSource newsRemoteDataSource,
+    required NetworkInfoContract networkInfo,
+    required NewsRemoteDataSourceContract newsRemoteDataSource,
   })  : _networkInfo = networkInfo,
         _newsRemoteDataSource = newsRemoteDataSource;
 

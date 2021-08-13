@@ -19,10 +19,13 @@ void main() {
     getNews = GetNews(mockNewsRepository);
   });
 
+  // ignore: prefer_const_constructors
   final tNewsResponse = NewsResponse(
     status: 'ok',
     totalResults: 1,
+    // ignore: prefer_const_literals_to_create_immutables
     articles: [
+      // ignore: prefer_const_constructors
       Article(
         author: 'Emmanuel',
         description: 'description',

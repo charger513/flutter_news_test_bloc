@@ -44,6 +44,7 @@ void main() {
         urlToImage: "https://example.com",
         publishedAt: DateTime.parse("2021-08-12T06:58:26.000Z"),
         content: null,
+        // ignore: prefer_const_constructors
         source: SourceModel(id: '1', name: 'name1'),
       ),
       ArticleModel(
@@ -54,6 +55,7 @@ void main() {
         urlToImage: "https://example.com",
         publishedAt: DateTime.parse("2021-08-12T05:16:00.000Z"),
         content: 'Content',
+        // ignore: prefer_const_constructors
         source: SourceModel(id: null, name: 'name2'),
       ),
     ],

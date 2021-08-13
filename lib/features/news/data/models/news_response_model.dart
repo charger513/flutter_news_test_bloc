@@ -14,7 +14,7 @@ NewsResponseModel newsResponseFromJson(String str) =>
 String newsResponseToJson(NewsResponseModel data) => json.encode(data.toJson());
 
 class NewsResponseModel extends NewsResponse {
-  NewsResponseModel({
+  const NewsResponseModel({
     required String status,
     required int totalResults,
     required List<ArticleModel> articles,

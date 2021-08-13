@@ -1,7 +1,7 @@
 import '../../domain/entities/source.dart';
 
 class SourceModel extends Source {
-  SourceModel({
+  const SourceModel({
     String? id,
     String? name,
   }) : super(id: id, name: name);

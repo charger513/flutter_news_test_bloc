@@ -3,7 +3,7 @@ import '../../domain/entities/article.dart';
 import 'source_model.dart';
 
 class ArticleModel extends Article {
-  ArticleModel({
+  const ArticleModel({
     SourceModel? source,
     String? author,
     String? title,

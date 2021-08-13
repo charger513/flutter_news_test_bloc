@@ -9,6 +9,7 @@ void main() {
     content: 'content',
     description: 'description',
     publishedAt: DateTime.now(),
+    // ignore: prefer_const_constructors
     source: SourceModel(id: 'id', name: 'name'),
     title: 'Title',
     url: 'Url',
